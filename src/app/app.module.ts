@@ -13,11 +13,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListataskComponent } from './components/listatask/listatask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksManagerComponent,
+    ListataskComponent,
   ],
   imports: [
     BrowserModule,
