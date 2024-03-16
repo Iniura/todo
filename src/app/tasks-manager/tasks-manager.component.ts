@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../shared/models/task';
 import { TaskService } from '../shared/services/task.service';
 
@@ -7,10 +7,20 @@ import { TaskService } from '../shared/services/task.service';
   templateUrl: './tasks-manager.component.html',
   styleUrls: ['./tasks-manager.component.scss']
 })
-export class TasksManagerComponent {
-  tasks: Task[] = [];
+export class TasksManagerComponent implements OnInit {
 
-  constructor(private taskService:TaskService ){
-
+  ngOnInit(){
+    //this.getTasks();
   }
+
+  tasks: Task[] = [];
+  constructor(private taskService:TaskService ){
+  }
+
+  // getTasks(){
+  //   //this.taskService.getTasks().subscribe( tasks => this.tasks = tasks);
+  //   //this.taskService.getTasks()( tasks => this.tasks = tasks);
+  //   this.tasks = this.taskService.getTasks();
+  // }
+
 }

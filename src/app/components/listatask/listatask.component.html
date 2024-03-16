@@ -1,0 +1,24 @@
+
+
+<div class="task-list" *ngIf="tasksList.length > 0">
+    <div class="card" *ngFor="let task of tasksList" style="border: 1px solid black;">
+
+
+      <div class="card-header">
+        <h5 class="card-title">Task {{ task.idTask }}</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ task.taskDescription }}</p>
+        <p class="card-text">Due Date: {{ task.dueDate | date:'short' }}</p>
+        <p class="card-text">Status: <span [ngClass]="{ 'text-success': task.completed, 'text-danger': !task.completed }">{{ task.completed ? 'Completed' : 'Incomplete' }}</span></p>
+      </div>
+    </div>
+
+
+
+</div>
+<div *ngIf="tasksList.length === 0" class="alert alert-info">No tasks available.</div>
+  
+
+
+
